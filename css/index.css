@@ -1,16 +1,9 @@
 .oswald {
 	font-family: "Oswald", sans-serif !important;
-	/* font-optical-sizing: auto;
-	font-style: normal; */
 }
 
 body {
-	font-family: "Archivo", sans-serif;
-	/* font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100; */
+	font-family: "Archivo", sans-serif !important;
 }
 
 .head {
@@ -149,7 +142,7 @@ footer {
 }
 .about {
 	color: #6b430e;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	font-family: "Inter", sans-serif;
 }
 .footer-links {
