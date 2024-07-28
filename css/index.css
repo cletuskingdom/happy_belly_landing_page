@@ -340,6 +340,42 @@ footer {
 	font-size: 23px;
 }
 
+#logo {
+	transition: width 0.3s ease, height 0.3s ease; /* Smooth transition for resizing */
+}
+
+.logo-container {
+	width: 1250px;
+	/* height: 250px; */
+	position: relative;
+    display: inline-block; /* Make sure container is inline-block to center content */
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 768px) {
+    #logo {
+        width: 300px; /* Default width for mobile */
+        height: 60px; /* Default height for mobile */
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #logo {
+        width: 600px; /* Default width for tablets */
+        height: 120px; /* Default height for tablets */
+    }
+}
+
+/* Desktops (default) */
+@media only screen and (min-width: 1025px) {
+    #logo {
+        width: 1250px; /* Default width for desktops */
+        height: 250px; /* Default height for desktops */
+    }
+}
+
+
 @media only screen and (max-width: 991px) {
 	.circle {
 		position: relative;
