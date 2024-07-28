@@ -90,7 +90,7 @@
 						</div>
 
 						<div class="ms-auto">
-							<button class="oder-btn oswald">ORDER NOW</button>
+							<button onclick="redirectToStore(); return false;" class="oder-btn oswald">ORDER NOW</button>
 						</div>
 					</div>
 				</div>
@@ -271,7 +271,7 @@
 							<h5 class="oswald" style="color: #6B430E; font-size: 30px;">Number <span style="color: #EEAE0C;">#One</span> Choice <br> Virtual Restaurant</h5>
 							<p class="pb-4 archivo" style="color: #3F3F46;">The number one restaurant where you are looking to satisfy taste buds and belly with tasteful delicacies.</p>
 
-							<a href="#!" class="oswald text-center PATHNER">ORDER NOW</a>
+							<a href="#" onclick="redirectToStore(); return false;" class="oswald text-center PATHNER">ORDER NOW</a>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -280,7 +280,7 @@
 							<h5 class="oswald" style="color: #6B430E; font-size: 30px;">Number <span style="color: #EEAE0C;">#One</span> Choice <br> Virtual Restaurant</h5>
 							<p class="pb-4 archivo" style="color: #3F3F46;">The number one restaurant where you are looking to satisfy taste buds and belly with tasteful delicacies.</p>
 							
-							<a href="#!" class="oswald text-center PATHNER">ORDER NOW</a>
+							<a href="#" onclick="redirectToStore(); return false;" class="oswald text-center PATHNER">ORDER NOW</a>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -289,7 +289,8 @@
 							<h5 class="oswald" style="color: #6B430E; font-size: 30px;">Number <span style="color: #EEAE0C;">#One</span> Choice <br> Virtual Restaurant</h5>
 							<p class="pb-4 archivo" style="color: #3F3F46;">The number one restaurant where you are looking to satisfy taste buds and belly with tasteful delicacies.</p>
 
-							<a href="#!" class="oswald text-center PATHNER">ORDER NOW</a>
+							<a href="#" onclick="redirectToStore(); return false;" class="oswald text-center PATHNER">ORDER NOW</a>
+
 						</div>
 					</div>
 				</div>
@@ -483,9 +484,7 @@
 						padding-top: 80px !important;
 					"
 				>
-					<a href="#!" class="oswald text-center PATHNER"
-						>ORDER NOW</a
-					>
+					<a href="#" onclick="redirectToStore(); return false;" class="oswald text-center PATHNER">ORDER NOW</a>
 				</div>
 			</div>
 		</div>
@@ -992,6 +991,23 @@
 			// Start observing the document body for changes
 			observer.observe(document.body, { childList: true, subtree: true });
 
+			// download the app
+			function redirectToStore() {
+				var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+				// Check if the user is on an Android device
+				if (/android/i.test(userAgent)) {
+					window.location.href = 'https://play.google.com/store/apps/details?id=com.happy.belly'; // Replace with your app's Play Store URL
+				}
+				// Check if the user is on an iOS device
+				else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+					window.location.href = 'https://apps.apple.com/ng/app/happy-belly-food-delivery-app/id6478605564'; // Replace with your app's App Store URL
+				}
+				// Optional: Handle other cases or show a message for non-mobile devices
+				else {
+					alert('Please visit this page on your mobile device to download the app.');
+				}
+			}
 		</script>
 	</body>
 </html>
