@@ -2,6 +2,10 @@
 	font-family: "Oswald", sans-serif !important;
 }
 
+.archivo {
+	font-family: "Archivo", sans-serif !important;
+}
+
 body {
 	font-family: "Archivo", sans-serif !important;
 }
@@ -328,6 +332,10 @@ footer {
 .ed_o .container {
 	margin-top: -13%;
 	/* position: relative; */
+}
+
+.navbar-nav a{
+	font-size: 23px;
 }
 
 @media only screen and (max-width: 991px) {
