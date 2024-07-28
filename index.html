@@ -28,6 +28,8 @@
 			rel="stylesheet"
 		/>
 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 		<style>
 			.carousel-item img{
 				height: 80vh;
@@ -97,13 +99,11 @@
 			</nav>
 		</header>
 
-		<div class="body pb-3">
-			<div class="container pt-2">
+		<div class="body">
+			<div class="container py-2">
 				<div class="logo-container text-center">
 					<a href="./">
 						<svg id="logo"
-							width="100%"
-							height="192"
 							viewBox="0 0 665 192"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
@@ -311,17 +311,23 @@
 		<div class="botton">
 			<marquee behavior="" direction="both">
 				<div class="d-flex justify-content-center text-uppercase">
-					<p class="Sales m-0 border border-top-0 border-bottom-0 border-start-0 oswald">Sales on all meal</p>
+					<p class="Sales m-0 oswald">Sales on all meal</p>
 
-					<p class="Sales m-0 border border-top-0 border-bottom-0 border-start-0 oswald">
+					<span><i class="fa fa-fire text-light"></i></span>
+
+					<p class="Sales m-0 oswald">
 						New Opening @ Victoria Island, lagos.
 					</p>
 
-					<p class="Sales m-0 border border-top-0 border-bottom-0 border-start-0 oswald">
+					<span><i class="fa fa-fire text-light"></i></span>
+
+					<p class="Sales m-0 oswald">
 						Free Delivery on Orders above 5,000
 					</p>
 
-					<p class="Sales m-0 border border-top-0 border-bottom-0 border-end-0 oswald">20% Flash Sales</p>
+					<span><i class="fa fa-fire text-light"></i></span>
+
+					<p class="Sales m-0 oswald">20% Flash Sales</p>
 				</div>
 			</marquee>
 		</div>
@@ -1021,23 +1027,31 @@
 				var baseWidth, baseHeight;
 
 				if (screenWidth <= 768) { // Mobile devices
-					baseWidth = 300; // Adjust base width for mobile
-					baseHeight = 60;  // Adjust base height for mobile
-				} else if (screenWidth <= 1024) { // Tablet devices
+					baseWidth = 355; // Adjust base width for mobile
+					baseHeight = 120;
+				} 
+				// else if (screenWidth <= 420) { // Mobile devices
+				// 	baseWidth = 355; // Adjust base width for tablets
+				// 	baseHeight = 120; // Adjust base height for tablets
+				// }
+				else if (screenWidth <= 1024) { // Tablet devices
 					baseWidth = 600; // Adjust base width for tablets
 					baseHeight = 120; // Adjust base height for tablets
 				} else { // Desktop devices
-					baseWidth = 1250; // Base width for desktop
+					baseWidth = 1000; // Base width for desktop
 					baseHeight = 250; // Base height for desktop
 				}
-
+				
 				// Adjust the scaling based on scroll position
-				var scale = Math.max(0.5, 1 - scrollY / 200); // Adjust 200 to control the scroll distance for scaling
+				var scale = 1 - scrollY / (screenWidth <= 768 ? 200 : 500); // Adjust scaling distance for mobile
+
+				// Ensure scale does not go below zero
+				scale = Math.max(scale, 0);
 
 				logo.style.width = baseWidth * scale + 'px';
 				logo.style.height = baseHeight * scale + 'px';
+				console.log('ScrollY:', scrollY, 'Scale:', scale);
 			});
-
 
 		</script>
 	</body>
