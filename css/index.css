@@ -123,9 +123,12 @@ p {
 .Purpose-paragraph3 {
 	padding: 50px 5px 0px 7px;
 }
+
 .Sales {
 	font-size: small;
+	padding: 0 20px !important;
 }
+
 .cook {
 	width: 70%;
 }
@@ -354,5 +357,9 @@ footer {
 		width: 500px !important;
 		height: 100px !important;
 		border-radius: 10px !important;
+	}
+
+	.Sales {
+		padding: 0 .5em !important;
 	}
 }
