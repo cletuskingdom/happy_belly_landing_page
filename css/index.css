@@ -351,6 +351,34 @@ footer {
     display: inline-block;
 }
 
+/* Style for carousel indicators inside items */
+.carousel-indicators-inside {
+    position: absolute;
+	bottom: 8%;
+	left: 18%;
+    transform: translateX(-50%);
+    display: flex;
+	justify-content: center;
+    gap: 5px;
+	background-color: #fff;
+	padding: 10px 20px;
+}
+
+/* Style individual indicators */
+.carousel-indicators-inside button {
+    background-color: #fe8914; /* Adjust as needed */
+    border: none;
+    border-radius: 50%;
+    width: 10px; /* Size of the indicator */
+    height: 10px; /* Size of the indicator */
+}
+
+/* Style active indicator */
+.carousel-indicators-inside .active {
+    background-color: #000; /* Adjust as needed */
+}
+
+
 @media only screen and (max-width: 420px) {
 	.logo-container {
         width: 355px !important;
