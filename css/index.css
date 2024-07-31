@@ -378,6 +378,14 @@ footer {
     background-color: #000; /* Adjust as needed */
 }
 
+.glider .center img{
+	height: 300px !important;
+}
+
+.carousel-item img{
+	height: 90vh;
+}
+
 
 @media only screen and (max-width: 420px) {
 	.logo-container {
@@ -395,6 +403,14 @@ footer {
 
 	#logo {
 		width: 390px;
+	}
+
+	.glider .center img{
+		height: 100% !important;
+	}
+
+	.carousel-item img{
+		height: 30vh;
 	}
 }
 
