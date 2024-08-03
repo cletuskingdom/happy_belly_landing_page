@@ -1161,7 +1161,6 @@
 
 		</script>
 
-
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script>
 			var carouselElement = document.querySelector('#carouselExampleCaptions');
@@ -1170,24 +1169,25 @@
 				ride: 'carousel'
 			});
 		</script>
+
 		<script>
 			function initializeGlider() {
-			  // Destroy the previous instance if it exists
-			  if (window.gliderInstance) {
-				window.gliderInstance.destroy();
-			  }
-		  
-			  // Create a new Glider instance with the appropriate settings
-			  window.gliderInstance = new Glider(document.querySelector('.glider'), {
-				slidesToShow: window.innerWidth <= 768 ? 1 : 3, // Change 768 to your breakpoint value
-				dots: '#dots',
-				slidesToScroll: 1,
-				draggable: true,
-				arrows: {
-				  prev: '.glider-prev',
-				  next: '.glider-next'
+				// Destroy the previous instance if it exists
+				if (window.gliderInstance) {
+					window.gliderInstance.destroy();
 				}
-			  });
+			
+				// Create a new Glider instance with the appropriate settings
+				window.gliderInstance = new Glider(document.querySelector('.glider'), {
+					slidesToShow: window.innerWidth <= 768 ? 1 : 3, // Change 768 to your breakpoint value
+					dots: '#dots',
+					slidesToScroll: 1,
+					draggable: true,
+					arrows: {
+					prev: '.glider-prev',
+					next: '.glider-next'
+					}
+				});
 			}
 		  
 			// Initialize Glider on page load
@@ -1195,7 +1195,6 @@
 		  
 			// Reinitialize Glider on window resize
 			window.addEventListener('resize', initializeGlider);
-		  </script>
-		  
+		</script>  
 	</body>
 </html>
