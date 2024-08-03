@@ -340,11 +340,6 @@ footer {
 	font-size: 23px;
 }
 
-#logo {
-	transition: width 0.3s ease, height 0.3s ease; /* Smooth transition for resizing */
-	width: 1000px;
-}
-
 .logo-container {
 	width: 1250px;
 	position: relative;
@@ -394,6 +389,12 @@ footer {
     }
 }
 
+#logo {
+	transition: width 0.3s ease, height 0.3s ease; /* Smooth transition for resizing */
+	width: 1500px;
+	height: 300;
+}
+
 /* Mobile devices */
 @media only screen and (max-width: 768px) {
     .logo-container {
@@ -402,7 +403,7 @@ footer {
     }
 
 	#logo {
-		width: 390px;
+		width: 400px;
 	}
 
 	.glider .center img{
