@@ -378,7 +378,7 @@ footer {
 }
 
 .carousel-item img{
-	height: 90vh;
+	height: 80vh;
 }
 
 
@@ -412,6 +412,30 @@ footer {
 
 	.carousel-item img{
 		height: 30vh;
+	}
+
+	.carousel-caption{
+		background-color: #FFFBEB;
+		position: absolute;
+		height: 17vh;
+		width: 70% !important;
+		padding: 10px !important;
+		border-radius: 10px;
+		text-align: left;
+		bottom: 15%;
+		left: 8% !important;
+	}
+
+	.carousel-caption h5{
+		font-size: 10px !important;
+	}
+
+	.carousel-caption p{
+		font-size: 10px !important;
+	}
+
+	.carousel-caption a{
+		font-size: 10px !important;
 	}
 }
 
