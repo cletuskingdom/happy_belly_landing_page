@@ -395,6 +395,14 @@ footer {
 	height: 300;
 }
 
+.shades{
+	background-color: #6b430e;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.5;
+}
+
 /* Mobile devices */
 @media only screen and (max-width: 768px) {
     .logo-container {
@@ -417,21 +425,38 @@ footer {
 	.carousel-caption{
 		background-color: #FFFBEB;
 		position: absolute;
-		height: 17vh;
-		width: 70% !important;
+		height: 15vh;
+		width: 50% !important;
 		padding: 10px !important;
 		border-radius: 10px;
 		text-align: left;
-		bottom: 15%;
+		bottom: 12% !important;
 		left: 8% !important;
 	}
 
+	.carousel-indicators-inside{
+		bottom: 3% !important;
+		left: 18%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		gap: 8px;
+		background-color: #fff;
+		padding: 5px 15px;
+	}
+
 	.carousel-caption h5{
-		font-size: 10px !important;
+		font-size: 15px !important;
+	}
+
+	.PATHNER {
+		padding: 3px 15px !important;
 	}
 
 	.carousel-caption p{
 		font-size: 10px !important;
+		padding-bottom: 8px !important;
+		margin-bottom: 0 !important;
 	}
 
 	.carousel-caption a{
